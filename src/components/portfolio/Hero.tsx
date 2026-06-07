@@ -36,43 +36,29 @@ export function Hero() {
       <div className="mx-auto w-full max-w-6xl px-5 py-20">
         <div className="grid items-center gap-12 md:grid-cols-[1fr_auto]">
           <div>
-            <motion.span
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-medium text-muted-foreground"
+            <span
+              className="inline-flex animate-fade-in items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-medium text-muted-foreground"
             >
               <span className="size-2 animate-pulse rounded-full bg-primary" />
               Available for opportunities
-            </motion.span>
+            </span>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 22 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.05 }}
-              className="mt-6 text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl"
+            <h1
+              className="mt-6 animate-fade-in text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl [animation-delay:0.05s]"
             >
               Hi, I'm {profile.name}
               <br />
               <span className="text-gradient">{profile.role}</span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 22 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.12 }}
-              className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
+            <p
+              className="mt-5 max-w-xl animate-fade-in text-base leading-relaxed text-muted-foreground sm:text-lg [animation-delay:0.12s]"
             >
               {profile.tagline}. Passionate about writing clean code and building
               real-world software.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 22 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.16 }}
-              className="mt-6 flex flex-wrap gap-2"
-            >
+            <div className="mt-6 flex animate-fade-in flex-wrap gap-2 [animation-delay:0.16s]">
               {techStack.map((tech) => (
                 <span
                   key={tech}
@@ -81,28 +67,18 @@ export function Hero() {
                   {tech}
                 </span>
               ))}
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 22 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.18 }}
-              className="mt-8 flex flex-wrap items-center gap-3"
-            >
+            <div className="mt-8 flex animate-fade-in flex-wrap items-center gap-3 [animation-delay:0.2s]">
               <Button size="lg" asChild>
                 <a href="#projects">View Projects</a>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <a href="#contact">Get in Touch</a>
               </Button>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.28 }}
-              className="mt-8 flex items-center gap-4 text-muted-foreground"
-            >
+            <div className="mt-8 flex animate-fade-in items-center gap-4 text-muted-foreground [animation-delay:0.28s]">
               <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="transition-colors hover:text-foreground">
                 <Github className="size-5" />
               </a>
@@ -115,29 +91,19 @@ export function Hero() {
               <span className="flex items-center gap-1.5 text-sm">
                 <MapPin className="size-4" /> {profile.location}
               </span>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 22 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.34 }}
-              className="mt-10 grid max-w-md grid-cols-3 gap-4 border-t border-border pt-6"
-            >
+            <div className="mt-10 grid max-w-md animate-fade-in grid-cols-3 gap-4 border-t border-border pt-6 [animation-delay:0.34s]">
               {stats.map((s) => (
                 <div key={s.label}>
                   <div className="font-display text-2xl font-bold text-foreground">{s.value}</div>
                   <div className="mt-0.5 text-xs text-muted-foreground">{s.label}</div>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="mx-auto hidden md:block"
-          >
+          <div className="order-first mx-auto animate-scale-in md:order-none">
             <div className="relative">
               {/* floating chips */}
               <motion.div
@@ -172,7 +138,7 @@ export function Hero() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         <a
