@@ -104,6 +104,11 @@
   --shadow-glow: 0 0 40px -8px color-mix(in oklab, var(--primary-glow) 40%, transparent);
   --shadow-card: 0 1px 3px color-mix(in oklab, var(--foreground) 6%, transparent), 0 8px 24px -12px color-mix(in oklab, var(--foreground) 10%, transparent);
   --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --aura-violet: oklch(0.78 0.15 300);
+  --aura-blue: oklch(0.78 0.13 256);
+  --aura-cyan: oklch(0.82 0.11 200);
+  --aura-pink: oklch(0.82 0.14 350);
+  --aura-amber: oklch(0.86 0.12 80);
 }
 
 .dark {
@@ -146,6 +151,11 @@
   --shadow-glow: 0 0 50px -8px color-mix(in oklab, var(--primary-glow) 45%, transparent);
   --shadow-card: 0 1px 3px color-mix(in oklab, black 30%, transparent), 0 8px 24px -12px color-mix(in oklab, black 40%, transparent);
   --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --aura-violet: oklch(0.6 0.2 300);
+  --aura-blue: oklch(0.62 0.18 256);
+  --aura-cyan: oklch(0.66 0.15 200);
+  --aura-pink: oklch(0.64 0.2 350);
+  --aura-amber: oklch(0.7 0.16 80);
 }
 
 @layer base {
