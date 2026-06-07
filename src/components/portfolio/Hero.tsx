@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { ArrowDown, Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { profile } from "./data";
+import portrait from "@/assets/arvind-portrait.jpg.asset.json";
 
 const techStack = ["Java", "Python", "React", "MongoDB", "Git"];
 
@@ -154,12 +155,21 @@ export function Hero() {
                 {"</>"} Clean code
               </motion.div>
 
-              <div className="relative grid size-64 place-items-center overflow-hidden rounded-[2rem] border border-border bg-card shadow-[var(--shadow-glow)]">
-                <div className="absolute inset-0 bg-[image:var(--gradient-primary)] opacity-10" />
-                <div className="absolute inset-px rounded-[calc(2rem-1px)] bg-grid opacity-40" />
-                <span className="relative bg-[image:var(--gradient-primary)] bg-clip-text font-display text-8xl font-bold text-transparent">
-                  AR
-                </span>
+              {/* gradient ring */}
+              <div className="absolute -inset-3 -z-10 rounded-[2.4rem] bg-[image:var(--gradient-primary)] opacity-25 blur-xl" />
+              <div className="relative h-80 w-64 overflow-hidden rounded-[2rem] border border-border bg-card p-1.5 shadow-[var(--shadow-glow)]">
+                <img
+                  src={portrait.url}
+                  alt={`${profile.name} — ${profile.role}`}
+                  loading="eager"
+                  className="h-full w-full rounded-[1.7rem] object-cover object-top"
+                />
+                <div className="pointer-events-none absolute inset-1.5 rounded-[1.7rem] bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+                <div className="pointer-events-none absolute inset-1.5 rounded-[1.7rem] ring-1 ring-inset ring-white/10" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="font-display text-sm font-semibold text-white drop-shadow">{profile.name}</p>
+                  <p className="text-xs text-white/70 drop-shadow">{profile.location}</p>
+                </div>
               </div>
             </div>
           </motion.div>
