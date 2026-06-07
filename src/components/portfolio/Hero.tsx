@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { ArrowDown, Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { profile } from "./data";
+import portrait from "@/assets/arvind-portrait.jpg.asset.json";
 
 const techStack = ["Java", "Python", "React", "MongoDB", "Git"];
 
