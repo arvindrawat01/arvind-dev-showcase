@@ -136,7 +136,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="mx-auto hidden md:block"
+            className="order-first mx-auto md:order-none"
           >
             <div className="relative">
               {/* floating chips */}
